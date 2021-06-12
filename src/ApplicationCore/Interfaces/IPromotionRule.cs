@@ -6,7 +6,7 @@ namespace PromotionEngine.ApplicationCore.Interfaces
 {
     public interface IPromotionRule
     {
-        (float SavedAmount, List<CartItem> PromotionAppliedItems) ApplyPromotion(List<CartItem> items,
+        PromotionRuleResult ApplyPromotion(List<CartItem> items,
             Promotion promotion);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 
 namespace PromotionEngine.ApplicationCore.Entities.PromotionAggregate
@@ -8,7 +9,9 @@ namespace PromotionEngine.ApplicationCore.Entities.PromotionAggregate
         public string PromotionName { get; set; }
         public DateTime EffectiveDate { get; set; }
         public DateTime ExpiryDate { get; set; }
-        public string ApplicableRuleName { get; set; }
-        public JObject DataPoints { get; set; } 
+        
+        public List<PromotionCriterion> Criteria { get; set; }
+        
+        public float OfferPrice { get; set; }
     }
 }
